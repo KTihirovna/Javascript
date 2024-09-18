@@ -133,12 +133,23 @@ const today = new Date();
  alert(`Your weekly earning is ${weeklyEarnings}`);
  
 // 9 If the length of your name is greater than 7 say, your name is long else say your name is short.
-// 10. Compare your first name length and your family name length and you should get this output.
 
-let firstName = 'Asabeneh'
-let lastName = 'Yetayeh'
-// Your first name, Asabeneh is longer than your family name, Yetayeh
- 
+const fullName = FirstName + " " + LastName;
+
+if (fullName.length > 7) {
+    console.log("My name is long.");
+} else {
+    console.log("My name is short.");
+}
+
+// Task 10: Compare first name length and family name length
+if (FirstName.length > LastName.length) {
+    console.log("Your first name is longer than your lastname.");
+} else if (FirstName.length < LastName.length) {
+    console.log("Your lastname is longer than your first name.");
+} else {
+    console.log("Your first name and lastname are of equal length.");
+}
 
 // 11. Declare two variables myAge and yourAge and assign them initial values and myAge and yourAge.
   let myAge = 250;
@@ -152,7 +163,23 @@ You are 25. You are old enough to drive
 
 Enter birth year: 2005
 You are 15. You will be allowed to drive after 3 years.*/
-  
+  // Get the current year
+const currentYear = new Date().getFullYear();
+
+// Prompt the user to enter their birth year
+const birthYear = prompt("Enter your birth year:");
+
+// Calculate the user's age
+const age = currentYear - birthYear;
+
+// Check if the user is 18 or older
+if (age >= 18) {
+    console.log(`You are ${age}. You are old enough to drive.`);
+} else {
+    const yearsToWait = 18 - age;
+    console.log(`You are ${age}. You need to wait ${yearsToWait} more years to drive.`);
+}
+
 
 //13. Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
 
@@ -160,15 +187,6 @@ You are 15. You will be allowed to drive after 3 years.*/
  const secondsLived = yearsLived * 365 * 24 * 60 * 60; 
  alert(`You lived ${secondsLived} seconds.`);
 
-// 14.Create a human readable time format using the Date time object
-
- /*YYYY-MM-DD HH:mm
- DD-MM-YYYY HH:mm
- DD/MM/YYYY HH:mm*/
-
-// Exercises: Level 3
- //Create a human readable time format using the Date time object. The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 )
-// YYY-MM-DD HH:mm eg. 20120-01-02 07:05
          
   
 
